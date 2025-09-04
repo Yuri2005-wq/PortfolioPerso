@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YURI DJALEU - Développeur Django</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+          :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background: white;
+     --text-color: #555;
+    --title-color: #000;
+    --menu-color: rgba(0, 0, 0, 1);
+    --bottom-color: #000;
+    --color-cool: #f5f5f5;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.dark-mode{
+    --background: #000;
+    --text-color: #999;
+    --title-color: #fff;
+    --bottom-color: white;
+    --color-cool: #000;
+}
+body h2{
+   color: var(--title-color);
+}
+body p{
+   color: var(--text-color);
+}
+body section{
+}
+#competences{
+   background-color: var(--color-cool);
+}
+#competences span, h6{
+   color: var(--text-color);
+}
+#contact{
+      background-color: var(--color-cool);
+}
+#apropos{
+   background-color: var(--background);
+}
+#apropos ul li{
+    color: var(--text-color);
+}
+#apropos strong{
+    color: var(--title-color);
+}
+#projets h2{
+    color: #000;
+}
+.winner{
+      background-color: white;
+}
+.project-card{
+    background-color: var(--background);
+
+}
+.custom{
+    background-color: var(--background);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 75px 0 75px;
+}
+.logo span{
+    font-size: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo p{
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text-color);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin:  20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 15px;
+}
+nav ul li a:hover{
+    background-color: purple;
+    border-radius: 20px;
+    color: #fff;
+
+    transition: 0.3s;
+}
+.trigger-btn span{
+    margin: 0 0 0 20px;
+    color: white;
+    font-weight: 600;
+}
+.trigger-btn{
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     cursor: pointer;
+     color: white;
+}
+
+/*le contenu du header*/
+
+.wrapper{
+    max-width: 600px;
+    margin-top: 10%;
+    margin-left: 65px;
+}
+.wrapper p{
+    text-align: justify;
+    color: var(--text-color)
+}
+.wrapper h1{
+    color: var(--title-color);
+    font-size: 60px;
+}
+.wrapper h2{
+    color: var(--text-color);
+}
+.wrapper .design{
+    text-decoration: none;
+    margin-top: 30px;
+}
+.wrapper a{
+    background-color: #764ba2;
+    padding:  13px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.first-section{
+    height: 100vh;
+    padding: 30px;
+    margin-top: 120px;
+}
+.first-section p{
+    text-align: center;
+    margin-top: 50px;
+}
+.section-title{
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+.section-title::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: #667eea;
+    text-align: center;
+    margin: 0 auto;
+}
+.first-section .info{
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 50px;
+}
+.first-section ul{
+    list-style: none;
+}
+.first-section li{
+    color: var(--text-color);
+    position: relative;
+    padding: 20px;
+}
+.first-section li::after{
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: #667eea;
+    text-align: center;
+    margin: 0 auto;
+
+
+}
+.skill-bar {
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 15px;
+ }
+
+.skill-progress {
+    background-color: red;
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+    transition: width 1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width: 580px) {
+    .wrapper{
+       margin-top: 50%;
+        margin-left: 35px;
+        margin-right: 20px;
+    }
+    .wrapper h1{
+        font-size: 45px;
+    }
+
+}
+
+
+@media screen and (max-width: 1224px){
+    body{
+        position:relative;
+    }
+    .content{
+        padding: 45px 50px 0 50px;
+    }
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        left: -1500px;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        height: 100vh;
+        width: 100%;
+        transition: 0.5s;
+    }
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 50px;
+        height: 45px;
+        right: 0;
+        margin: 0 40px 0 0;
+        position: absolute;
+        padding: 15px 5px 35px 5px;
+        border: solid 2px var(--bottom-color);
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .btn::after{
+        position: absolute;
+        content: "";
+        width: 38px;
+        height: 5px;
+        background-color: var(--bottom-color);
+        border-radius: 30px;
+        box-shadow:  0 10px 0 var(--bottom-color);
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .btn.active::after{
+        box-shadow: 0 0 0 #000;
+        transform: rotate(45deg);
+        transform: translateY(10px);
+    }
+     .btn::before{
+        content: "";
+        width: 38px;
+        height: 5px;
+        background-color: #000;
+        position: absolute;
+        border-radius: 30px;
+        transition: 0.5s;
+    }
+    .btn.active::before{
+        transform: rotate(-45deg);
+        transform: translateY(10px);
+    }
+    ul.active{
+        left: 0;
+    }
+    .photo-profil{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .hero {
+           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            height: 100vh;
+        }
+        .hero h1{
+            margin: 150px  0 20px 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 15px auto;
+        }
+
+        .skill-bar {
+            background: #f1f1f1;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .skill-progress {
+            background: #764ba2;
+            height: 8px;
+            border-radius: 5px;
+            position: relative;
+            transition: width 1s ease-in-out;
+        }
+
+        .project-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .contact-form .form-control {
+            border-radius: 0;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        .first{
+            padding: 15px;
+        }
+        #projets p{
+            text-align: justify;
+        }
+        .custum{
+            background-color: purple;
+            padding: 5px;
+            border-radius: 50px;
+            color: white;
+        }
+        .hero .small{
+           font-size: 16px;
+          }
+        .card{
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+
+        }
+        .river{
+             background-color: #764ba2;
+    padding:  8px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    border: none;
+        }
+        #apropos p{
+        text-align: justify;
+        }
+        .photo-profil{
+          position: absolute;
+          bottom: 0;
+          right: 10%;
+        }
+        .photo-profil img{
+            width: 450px;
+            display: block;
+            height: 600px;
+        }
+@media screen and (min-width: 1224px){
+        .before{
+            display: none;
+        }
+}
+
+    </style>
+</head>
+<body>
+
+ <header id="Acceuil">
+        <div class="content">
+        <div class="logo">
+            <span>YD</span><p>Yuri Djaleu</p>
+        </div>
+        <div class="btn">
+
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#Acceuil">Acceuil</a></li>
+                <li><a href="#apropos">A propos</a></li>
+                <li><a href="#projets">Projet</a></li>
+                <li><a href="#competences">Competences</a></li>
+                <li><a href="#contact">Contact</a></li>
+                    <div class="trigger-btn" id="btn"><span>Mode</span>🌙\☀️</div>
+
+            </ul>
+        </nav>
+
+        </div>
+          <div class="wrapper">
+
+                 <h2>Bonjour je suis,</h2>
+                <h1>Yuri Djaleu</h1>
+                <p>Développeur <strong>Full-Stack</strong>, je créee des sites web et application web.
+                    Je vous invite à visiter mes différentes réalisations dans la section Projets
+                </p>
+               <div class="design" ><a href="{{ MEDIA_URL }}YuridjaleuCV.pdf" download >Télécharger mon <strong>CV</strong> ici <i class="fas fa-download"></i></a></div>
+                {% for perso in portfolios %}
+                    <div class="photo-profil">
+                    <img src="{{ perso.profile.url }}" alt="Yuri Djaleu" class="img-fluid rounded">
+                </div>
+                {% endfor %}
+
+
+
+          </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- À propos -->
+    <section id="apropos" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title text-center">À propos de moi</h2>
+                    <p>Je suis un développeur passionné basé au Cameroun, spécialisé dans la création d'applications web ,et de site web. J'aime résoudre des problèmes complexes et créer des solutions qui améliorent la vie des gens.</p>
+                    <p>Actuellement étudiant en développement, je me consacre à l'apprentissage continu et à l'amélioration de mes compétences en programmation.</p>
+                    <div class="row mt-4">
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+
+         {% for perso in portfolios %}
+                                <li><strong>Nom : </strong>{{ perso.nom }}</li>
+                                <li><strong>Téléphone : </strong> +237 {{ perso.telephone }}</li>
+                                <li><strong>Ville : </strong> {{ perso.ville }},Cameroun</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+                                <li><strong>Diplôme :</strong> {{ perso.diplome }}, Informatique</li>
+                                <li><strong>Email :</strong> {{ perso.email }}</li>
+                                <li><strong>Disponibilité :</strong> Freelance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="before col-lg-6">
+                    <img src="{{ perso.profile.url }}" alt="Yuri Djaleu" class="img-fluid rounded">
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="py-5 ">
+        <div class="container">
+            <h2 class="section-title text-center">Mes compétences</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between">
+                            <h6>Django</h6>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between">
+                            <h6>Python</h6>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between">
+                            <h6>HTML/CSS</h6>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between">
+                            <h6>JavaScript</h6>
+                            <span>35%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 35%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between">
+                            <h6>Base de données (SQL)</h6>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between">
+                            <h6>Git & GitHub</h6>
+                            <span>40%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Projets -->
+    <section id="projets" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Mes projets</h2>
+            <div class="row">
+                <!-- Application de gestion d'absences -->
+
+                {% if projets %}
+
+                {% for projet in projets %}
+
+                <div class="winner col-md-6 col-lg-4">
+                    <div class="project-card p-4">
+                        <img src="{{ projet.image.url }}" class="project-img card-img-top" alt="Gestion d'absences">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ projet.libelle }}</h5>
+                            <p class="card-text">{{ projet.comment }}</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">{{ projet.language }}</span>
+                                <span class="badge bg-secondary">{{ projet.base_donnee }}</span>
+                                <span class="badge bg-success">{{ projet.en_pluse }}</span>
+                                <span class="badge bg-primary">{{ projet.balise }}</span>
+                                <span class="badge bg-secondary">{{ projet.style }}</span>
+                                <span class="badge bg-success">{{ projet.script }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                  {% endif %}
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+
+        <div class="container">
+            <h2 class="section-title text-center">Contactez-moi</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                   <form class="contact-form" method="Post">
+                         {% csrf_token %}
+                        {{ form.as_p}}
+                       <div class="text-center">
+                            <button type="submit" class=" river">Envoyer le message</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="social-links mb-4">
+                <a href="#"><i class="bi bi-github"></i></a>
+            </div>
+            <p class="small">&copy; 2025 Yuri Djaleu. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation des barres de compétences
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            skillBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        });
+    </script>
+ <script>
+        // Fonction pour masquer un message
+        function hideMessage(messageId) {
+            const message = document.getElementById(messageId);
+            if (message) {
+                message.classList.add('fade-out');
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 1000);
+            }
+        }
+
+        // Masquer automatiquement les messages après 3 secondes
+        document.addEventListener('DOMContentLoaded', function() {
+            const messages = document.querySelectorAll('.alert');
+            messages.forEach(message => {
+                setTimeout(() => {
+                    message.classList.add('fade-out');
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 1000);
+                }, 3000); // 3 secondes
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+
+            // Options pour l'Intersection Observer
+            const options = {
+                root: null, // par rapport à la fenêtre
+                rootMargin: '0px',
+                threshold: 0.2 // déclencheur lorsque 20% de l'élément est visible
+            };
+
+            // Fonction de callback pour l'Observer
+            const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Arrête d'observer après l'affichage
+                    }
+                });
+            };
+
+            // Création de l'Observer
+            const observer = new IntersectionObserver(callback, options);
+
+            // Observer chaque carte
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+ <script>
+        var btn = document.querySelector(".btn")
+        var menu = document.querySelector('.menu')
+
+        btn.onclick = function(){
+
+            btn.classList.toggle("active")
+            menu.classList.toggle("active")
+
+        }
+    </script>
+
+    <script>
+        var button = document.querySelector(".trigger-btn");
+
+        button.onclick = function(){
+            document.body.classList.toggle("dark-mode")
+        }
+    </script>
+
+
+
+
+</body>
+</html>

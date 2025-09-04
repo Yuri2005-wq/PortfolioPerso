@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+
+      <div class="sms-container">
+          <div>
+              {% for information in informations %}
+              <div class="content">
+                  <div class="sms">
+                      <div class="row">
+                      <div class="dest-name"> <span class="info"><strong>{{ information.Full_name }}</strong></span>,  <span class="info"> <strong>{{ information.email }} | {{ information.number}}</strong></span></div>
+
+                          </div>
+                          </div>
+                        <div><strong><p class="purple">{{ information.sujet }}</p></strong></div>
+                      <p> {{ information.messages }}</p>
+                  <div class="date"><span class="infi">{{ information.date_publication }}</span></div>
+                  </div>
+              {% endfor %}
+              </div>
+                  </div>
+      <style>
+          body{
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+
+          }
+
+          .sms-container{
+                 background-color: white;
+                 width: 100%;
+                 border-radius: 15px;
+          }
+          .content{
+                 width: fit-content;
+
+                  background-color:  #f1f3f5;
+                 border: 1px solid #5a6268;
+                 margin: 50px;
+                 border-radius: 10px;
+                 padding: 14px 20px 20px 20px;
+
+          }
+          .info{
+                padding: 5px;
+                background-color: #90EE9066;
+                border-radius: 30px;
+                font-size: 12px;
+          }
+          p{
+            margin: 10px 0 0 0;
+            text-align: justify;
+          }
+          .infi{
+                padding: 5px;
+                background-color: #FFFF0066;
+                border-radius: 30px;
+                font-size: 8px;
+          }
+          .purple{
+               padding: 5px;
+                background-color: #EE82EE66 ;
+                border-radius: 30px;
+                font-size: 12px;
+                width: fit-content;
+          }
+
+
+      </style>
+</body>
+</html>

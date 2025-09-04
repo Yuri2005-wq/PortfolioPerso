@@ -1,0 +1,22 @@
+# .gitignore pour Django avec MySQL
+
+# Environnement Python
+venv/
+env/
+myenv/
+ENV/
+
+# Fichiers cache Python
+__pycache__/
+*.pyc
+
+# Fichiers sensibles (très important !)
+.env
+*.env
+
+# Fichiers de configuration personnels
+config.ini
+settings_local.py
+
+# Fichiers de base de données (même si vous utilisez MySQL, c'est une bonne pratique)
+*.db
